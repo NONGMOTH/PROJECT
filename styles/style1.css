@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.space-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #1d0029, #000000);
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    animation: twinkle 10s infinite;
+}
+
+.star:nth-child(1) { top: 20%; left: 15%; }
+.star:nth-child(2) { top: 50%; left: 75%; }
+.star:nth-child(3) { top: 80%; left: 45%; }
+
+.planet {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%, #4a89dc, #1c2833);
+    border-radius: 50%;
+    top: 70%;
+    left: 70%;
+    box-shadow: 0 0 20px rgba(74, 137, 220, 0.6);
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.action-button {
+    position: absolute; /* Positioning the button */
+    top: 75%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #3c0039; /* Button color */
+    color: rgb(255, 255, 255); /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-block; /* Ensures the anchor behaves like a button */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+}
+
+.action-button1 {
+    position: absolute; /* Positioning the button */
+    bottom: 15px; /* Distance from the bottom */
+    left: 10px; /* Distance from the left */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #4b6cb7; /* Button color */
+    color: rgb(39, 2, 84); /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-block; /* Ensures the anchor behaves like a button */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+}
+
+.button-container1 .action-button1:hover {
+    background-color: #E1306C; /* Instagram pink */
+    color: white; /* Change text color to white */
+}
